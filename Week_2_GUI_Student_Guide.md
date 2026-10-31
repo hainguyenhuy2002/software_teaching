@@ -28,7 +28,7 @@ Our example is a **club ticket calculator** with these rules:
 - The quantity must be a **whole number from 1 to 5, inclusive**. Inclusive means both 1 and 5 are allowed.
 - The program calculates a quote when **Calculate total** is activated. It does not take payment or reserve tickets.
 
-![A numbered ticket-calculator screen, with a matching explanation of the window, quantity field, membership checkbox, Calculate button and result label.](assets/01-ticket-interface.svg)
+![A numbered ticket-calculator screen, with a matching explanation of the window, quantity field, membership checkbox, Calculate button and result label.](week_2_svg/01-ticket-interface.svg)
 
 *Figure 1. Read the numbered screen parts alongside their jobs. The field and checkbox supply information; the button requests an action; the label displays feedback.*
 
@@ -44,7 +44,7 @@ A **widget** is one component of an interface. An interactive widget is often ca
 | **Radio-button group** | A set of related choices from which one can be selected. | Reads the selected option. |
 | **Dropdown list** | A list of options that opens when activated. | Reads the selected item. A selection-only dropdown prevents typing an unlisted value. |
 
-![Six controls with an example, a plain-language purpose and the kind of information or action each provides.](assets/02-widget-gallery.svg)
+![Six controls with an example, a plain-language purpose and the kind of information or action each provides.](week_2_svg/02-widget-gallery.svg)
 
 *Figure 2. Choose a control by asking what the user needs to provide or do.*
 
@@ -74,7 +74,7 @@ In our calculator:
 - **Callback:** the function `on_calculate` runs.
 - **Response:** it reads and checks the inputs, calculates a price and changes the result label.
 
-![A clockwise four-step event cycle: wait for an event, activate Calculate, run on_calculate, finish the callback and return to waiting.](assets/03-event-loop.svg)
+![A clockwise four-step event cycle: wait for an event, activate Calculate, run on_calculate, finish the callback and return to waiting.](week_2_svg/03-event-loop.svg)
 
 *Figure 3. Follow the arrows clockwise. One click causes one callback call; finishing that call leaves the application ready for another action.*
 
@@ -102,7 +102,7 @@ calculate_button = ttk.Button(
 
 Read `command=on_calculate` as: **“Use this function when the button is activated.”** The button stores a reference to the function so it can call it later.
 
-![A comparison of command=on_calculate, which connects the function for later, and command=on_calculate(), which immediately calls it during setup.](assets/04-callback-connection.svg)
+![A comparison of command=on_calculate, which connects the function for later, and command=on_calculate(), which immediately calls it during setup.](week_2_svg/04-callback-connection.svg)
 
 *Figure 4. The round brackets `()` determine whether Python passes the function itself or calls it immediately.*
 
@@ -117,7 +117,7 @@ In this example, `command=on_calculate()` would run the callback while the butto
 
 **Input–process–output**, abbreviated to **IPO**, describes how information moves through a program.
 
-![A worked IPO example: quantity 3 and membership True select a unit price of 10, produce a total of 30 and display $30.00.](assets/05-ipo.svg)
+![A worked IPO example: quantity 3 and membership True select a unit price of 10, produce a total of 30 and display $30.00.](week_2_svg/05-ipo.svg)
 
 *Figure 5. The membership value is part of the input. It changes which price the program uses during processing.*
 
@@ -154,7 +154,7 @@ raw_quantity = quantity_entry.get()
 
 The quotation marks show that a value is text in the explanation and code. They are not extra characters the user needs to type.
 
-![Five steps with operation, value and type: typed 3, string "3" read from the field, integer 3 after conversion, integer 36 after calculation, and string "$36.00" for display.](assets/06-data-conversion.svg)
+![Five steps with operation, value and type: typed 3, string "3" read from the field, integer 3 after conversion, integer 36 after calculation, and string "$36.00" for display.](week_2_svg/06-data-conversion.svg)
 
 *Figure 6. This example uses three standard tickets: Member is `False`, so the price is $12 each. Read down the steps. Conversion prepares a number for arithmetic; formatting prepares text for the screen.*
 
@@ -174,7 +174,7 @@ Types matter. `"3" * 2` repeats text and produces `"33"`. `3 * 2` multiplies num
 2. **Type:** can the supplied text be converted to a whole number?
 3. **Range:** is that number from 1 to 5, including both endpoints?
 
-![A validation flow with a successful downward path and separate failure paths for blank text, non-integer text and an out-of-range number. Each failure shows feedback and ends only the current callback.](assets/07-validation-flow.svg)
+![A validation flow with a successful downward path and separate failure paths for blank text, non-integer text and an out-of-range number. Each failure shows feedback and ends only the current callback.](week_2_svg/07-validation-flow.svg)
 
 *Figure 7. Follow the Yes arrows to the calculation. A No arrow leads to feedback and an early return; the window remains open.*
 
@@ -269,7 +269,7 @@ result_label.configure(text=f"Last calculated total: ${total:.2f}")
 3. Store the returned number in `total`.
 4. Format it and change the visible label.
 
-![Numbered data flow from widgets to callback, to calculation function and back, then to the result label, using concrete text and number values.](assets/08-function-separation.svg)
+![Numbered data flow from widgets to callback, to calculation function and back, then to the result label, using concrete text and number values.](week_2_svg/08-function-separation.svg)
 
 *Figure 8. With quantity `3` and membership `False`, the calculation returns `36` to the callback. The callback must still place display text in the label.*
 
@@ -291,7 +291,7 @@ The expression `f"${total:.2f}"` creates formatted text. The `$` is a visible cu
 
 These values do not all change at the same time.
 
-![A sequence of four states: ready with quantity 3, standard quote calculated as $36.00, membership selected with the old quote still visible, and a new calculation displaying $30.00.](assets/09-state-snapshots.svg)
+![A sequence of four states: ready with quantity 3, standard quote calculated as $36.00, membership selected with the old quote still visible, and a new calculation displaying $30.00.](week_2_svg/09-state-snapshots.svg)
 
 *Figure 9. Compare the middle two screens carefully. The membership input changes immediately; the calculated output changes only after another Calculate action.*
 
@@ -333,7 +333,7 @@ In the full example, the widget names and price constants are defined at **modul
 
 Tkinter's `.grid()` places widgets in rows and columns. Row and column numbers start at **0**.
 
-![A labelled two-column, four-row layout, with the quantity field highlighted at row 0 column 1 and full-width rows showing columnspan=2.](assets/10-layout-grid.svg)
+![A labelled two-column, four-row layout, with the quantity field highlighted at row 0 column 1 and full-width rows showing columnspan=2.](week_2_svg/10-layout-grid.svg)
 
 *Figure 10. Read the row number from the left and the column number from above. This grid describes screen positions.*
 
@@ -353,7 +353,7 @@ The layout grid is not a two-dimensional data array. It controls where widgets a
 
 #### Use words that explain the task
 
-![Two forms with matching numbered features: an unclear field caption, action and output on the left, and specific input instructions, Calculate total and a labelled result on the right.](assets/11-clear-interface.svg)
+![Two forms with matching numbered features: an unclear field caption, action and output on the left, and specific input instructions, Calculate total and a labelled result on the right.](week_2_svg/11-clear-interface.svg)
 
 *Figure 11. Compare matching numbers. Each wording change answers a question the user would otherwise have to guess.*
 
