@@ -537,55 +537,7 @@ The explanations, ticket program, learning diagrams and original practice questi
 
 ## Questions
 
-### A. Real VCAA examination questions
-
-**Source:** *2025 VCE Applied Computing Software Development examination*, 13 November 2025. The pages below are **printed booklet pages**, which also match the page positions in the linked official PDF for these extracts. The images preserve the question content; unrelated later questions are cropped out where indicated.
-
-**Copyright acknowledgement:** © Victorian Curriculum and Assessment Authority. For current versions and related content visit [www.vcaa.vic.edu.au](https://www.vcaa.vic.edu.au).
-
-#### R1 — Section A Question 6 — 1 mark
-
-**Direct GUI question — Class sections 2 and 8.** Use the explanations of controls, labels and interface cues to interpret the mock-up. The UX terms help describe what a user can understand or do from visible features.
-
-The shared tax-calculator mock-up and the complete question are below. Keep this mock-up available for R2 as well. [Official source, page 4](https://vcaacorporateprod.prod.acquia-sites.com/sites/default/files/2025-12/2025-AppliedComp-SoftwareDev.pdf#page=4).
-
-![Original VCAA 2025 booklet page 4, showing the tax-calculator mock-up and Section A Question 6 with all four options.](assets/vcaa-2025-page-04.png)
-
-#### R2 — Section A Question 7 — 1 mark
-
-**Direct GUI-to-processing question — Class sections 4 and 6.** Trace the information supplied through the interface, the operations applied to it and the resulting output. Compare each proposed IPO chart with the mock-up’s controls and purpose.
-
-Use the mock-up in R1. All four original IPO-chart alternatives are reproduced below. [Official source, page 5](https://vcaacorporateprod.prod.acquia-sites.com/sites/default/files/2025-12/2025-AppliedComp-SoftwareDev.pdf#page=5).
-
-![Original VCAA 2025 booklet page 5, containing Section A Question 7 and all four complete IPO-chart alternatives.](assets/vcaa-2025-page-05.png)
-
-#### R3 — Section C Question 8 — 4 marks
-
-**Direct GUI and UX question — Class section 8.** Connect visible design features to their effects on the user. Compare both sketches using the UX terms, distinguishing visible evidence from assumptions about hidden code.
-
-The case concerns a rental-property-management web application. Both original dashboard sketches and the response prompt are provided. For the wider case, see the [original Insert](https://vcaacorporateprod.prod.acquia-sites.com/sites/default/files/2025-12/2025-AppliedComp-SoftwareDev.pdf#page=34). [Question source, pages 24–25](https://vcaacorporateprod.prod.acquia-sites.com/sites/default/files/2025-12/2025-AppliedComp-SoftwareDev.pdf#page=24).
-
-![Original VCAA 2025 booklet page 24, containing the setup and both dashboard sketches for Section C Question 8.](assets/vcaa-2025-page-24.png)
-
-![Original response prompt and response spaces for Section C Question 8 on booklet page 25; the following question has been excluded.](assets/vcaa-2025-page-25-q8.png)
-
-#### R4 — Section A Question 15 — 1 mark
-
-**Supporting programming question — Class section 7.** Apply the distinction between constants, local variables and names available across the program. The calculator illustrates the different roles of fixed prices and values read during a callback. The original stimulus is not a GUI; read its negative command carefully. [Official source, page 9](https://vcaacorporateprod.prod.acquia-sites.com/sites/default/files/2025-12/2025-AppliedComp-SoftwareDev.pdf#page=9).
-
-![Original Section A Question 15 from VCAA 2025 booklet page 9, including its setup, declarations and all four alternatives.](assets/vcaa-2025-page-09-q15.png)
-
-#### R5 — Section C Question 11 parts a to c — 9 marks
-
-**Supporting validation and testing question — Class sections 5, 6 and 10.** Use input validation, execution order and test-case design to trace the code. Distinguish text displayed on a screen from a value returned by a function. The original stimulus is pseudocode, not a GUI.
-
-Read the complete requirements and numbered pseudocode before attempting the subparts. Part a is 1 mark, part b is 2 marks and part c is 6 marks. The original table headings and supplied example row are retained exactly as printed. [Official source, pages 28–29](https://vcaacorporateprod.prod.acquia-sites.com/sites/default/files/2025-12/2025-AppliedComp-SoftwareDev.pdf#page=28).
-
-![Original VCAA 2025 booklet page 28, containing Section C Question 11 requirements, numbered pseudocode and parts a and b.](assets/vcaa-2025-page-28.png)
-
-![Original Section C Question 11 part c on booklet page 29, including the assumptions and full test table; the following question has been excluded.](assets/vcaa-2025-page-29-q11c.png)
-
-### B. Original practice questions
+### A. Original practice questions
 
 **These questions were written for this guide. They are not past VCAA questions and are not endorsed by VCAA.** The set contains 30 suggested practice marks: 8 multiple-choice marks, 10 short-answer marks and 12 case-study marks. It is a small practice set, not the official examination structure.
 
@@ -675,22 +627,22 @@ B. It guarantees that the program cannot raise an exception.
 C. It communicates the accepted input before the user submits it.  
 D. It removes the need for input checking in code.
 
-#### Practice Section B — Short answer — 10 marks
+#### Practice Section A — Short answer — 10 marks
 
-**P-B1 — Following an event — 4 marks**
+**P-A1 — Following an event — 4 marks**
 
 A school canteen has a GUI that calculates the price of lunch orders. The user enters a quantity, selects whether a drink is included and activates Calculate. The calculation function returns a price, but the result label does not change.
 
 a. Identify the event and describe the callback's role. **2 marks**  
 b. Explain why returning a price does not automatically change the label, and describe the additional operation needed. **2 marks**
 
-**P-B2 — Checking input — 3 marks**
+**P-A2 — Checking input — 3 marks**
 
 A swimming-pool application accepts a whole-number quantity from 1 to 6 in a text field. A developer immediately executes `quantity = int(quantity_entry.get())` when Calculate is activated.
 
 Explain how the callback should handle missing input, unsuitable text and values outside the permitted range before calculating. **3 marks**
 
-**P-B3 — Choosing controls — 3 marks**
+**P-A3 — Choosing controls — 3 marks**
 
 A workshop-registration interface must collect:
 
@@ -700,9 +652,9 @@ A workshop-registration interface must collect:
 
 For each item, identify a suitable control and give a reason for its suitability. **3 marks**
 
-#### Practice Section C — Case study — 12 marks
+#### Practice Section B — Case study — 12 marks
 
-**P-C1 — Community-room price calculator**
+**P-B1 — Community-room price calculator**
 
 A community centre is developing a GUI that calculates a room-hire quote. Hiring the room costs **$8 per whole hour**. The permitted duration is **1 to 4 hours inclusive**. Selecting the Projector checkbox adds **one fixed $5 charge** to the quote.
 
@@ -747,3 +699,59 @@ d. The user has calculated a quote and then selects Projector without activating
 e. Specify one valid boundary test and one invalid range test. Include the input, checkbox choice and exact expected displayed result or message for each test. **2 marks**
 
 f. Propose one improvement to the interface's feedback and explain its effect on the person using the application. **2 marks**
+
+
+
+
+
+### C. Real VCAA examination questions
+
+**Source:** *2025 VCE Applied Computing Software Development examination*, 13 November 2025. The pages below are **printed booklet pages**, which also match the page positions in the linked official PDF for these extracts. The images preserve the question content; unrelated later questions are cropped out where indicated.
+
+**Copyright acknowledgement:** © Victorian Curriculum and Assessment Authority. For current versions and related content visit [www.vcaa.vic.edu.au](https://www.vcaa.vic.edu.au).
+
+#### R1 — Section C Question 6 — 1 mark
+
+**Direct GUI question — Class sections 2 and 8.** Use the explanations of controls, labels and interface cues to interpret the mock-up. The UX terms help describe what a user can understand or do from visible features.
+
+The shared tax-calculator mock-up and the complete question are below. Keep this mock-up available for R2 as well. [Official source, page 4](https://vcaacorporateprod.prod.acquia-sites.com/sites/default/files/2025-12/2025-AppliedComp-SoftwareDev.pdf#page=4).
+
+![Original VCAA 2025 booklet page 4, showing the tax-calculator mock-up and Section A Question 6 with all four options.](assets/vcaa-2025-page-04.png)
+
+#### R2 — Section C Question 7 — 1 mark
+
+**Direct GUI-to-processing question — Class sections 4 and 6.** Trace the information supplied through the interface, the operations applied to it and the resulting output. Compare each proposed IPO chart with the mock-up’s controls and purpose.
+
+Use the mock-up in R1. All four original IPO-chart alternatives are reproduced below. [Official source, page 5](https://vcaacorporateprod.prod.acquia-sites.com/sites/default/files/2025-12/2025-AppliedComp-SoftwareDev.pdf#page=5).
+
+![Original VCAA 2025 booklet page 5, containing Section A Question 7 and all four complete IPO-chart alternatives.](assets/vcaa-2025-page-05.png)
+
+#### R3 — Section C Question 8 — 4 marks
+
+**Direct GUI and UX question — Class section 8.** Connect visible design features to their effects on the user. Compare both sketches using the UX terms, distinguishing visible evidence from assumptions about hidden code.
+
+The case concerns a rental-property-management web application. Both original dashboard sketches and the response prompt are provided. For the wider case, see the [original Insert](https://vcaacorporateprod.prod.acquia-sites.com/sites/default/files/2025-12/2025-AppliedComp-SoftwareDev.pdf#page=34). [Question source, pages 24–25](https://vcaacorporateprod.prod.acquia-sites.com/sites/default/files/2025-12/2025-AppliedComp-SoftwareDev.pdf#page=24).
+
+![Original VCAA 2025 booklet page 24, containing the setup and both dashboard sketches for Section C Question 8.](assets/vcaa-2025-page-24.png)
+
+![Original response prompt and response spaces for Section C Question 8 on booklet page 25; the following question has been excluded.](assets/vcaa-2025-page-25-q8.png)
+
+#### R4 — Section A Question 15 — 1 mark
+
+**Supporting programming question — Class section 7.** Apply the distinction between constants, local variables and names available across the program. The calculator illustrates the different roles of fixed prices and values read during a callback. The original stimulus is not a GUI; read its negative command carefully. [Official source, page 9](https://vcaacorporateprod.prod.acquia-sites.com/sites/default/files/2025-12/2025-AppliedComp-SoftwareDev.pdf#page=9).
+
+![Original Section A Question 15 from VCAA 2025 booklet page 9, including its setup, declarations and all four alternatives.](assets/vcaa-2025-page-09-q15.png)
+
+#### R5 — Section C Question 11 parts a to c — 9 marks
+
+**Supporting validation and testing question — Class sections 5, 6 and 10.** Use input validation, execution order and test-case design to trace the code. Distinguish text displayed on a screen from a value returned by a function. The original stimulus is pseudocode, not a GUI.
+
+Read the complete requirements and numbered pseudocode before attempting the subparts. Part a is 1 mark, part b is 2 marks and part c is 6 marks. The original table headings and supplied example row are retained exactly as printed. [Official source, pages 28–29](https://vcaacorporateprod.prod.acquia-sites.com/sites/default/files/2025-12/2025-AppliedComp-SoftwareDev.pdf#page=28).
+
+![Original VCAA 2025 booklet page 28, containing Section C Question 11 requirements, numbered pseudocode and parts a and b.](assets/vcaa-2025-page-28.png)
+
+![Original Section C Question 11 part c on booklet page 29, including the assumptions and full test table; the following question has been excluded.](assets/vcaa-2025-page-29-q11c.png)
+
+
+
+
