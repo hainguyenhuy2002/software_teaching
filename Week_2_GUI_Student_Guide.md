@@ -186,7 +186,7 @@ raw_quantity = quantity_entry.get().strip()
 
 `.strip()` removes whitespace from the beginning and end. `" 3 "` becomes `"3"`. A field containing only spaces becomes the empty string `""`.
 
-**Step 2 — handle an empty field.**
+**Step 2 — handle an empty field - existence check**
 
 ```python
 if raw_quantity == "":
@@ -196,7 +196,7 @@ if raw_quantity == "":
 
 `.configure(text=...)` changes the label's text. `return` ends this callback call so Python does not continue to the conversion below. It does not close the application.
 
-**Step 3 — attempt integer conversion safely.**
+**Step 3 — attempt integer conversion safely - type check / safe conversion**
 
 ```python
 try:
@@ -208,7 +208,7 @@ except ValueError:
 
 `int("3")` succeeds. `int("three")` and `int("3.5")` fail with a `ValueError`. The `except` block handles that failure and shows a message. The program can then accept another attempt.
 
-**Step 4 — check the permitted range.**
+**Step 4 — check the permitted range - range check**
 
 ```python
 if quantity < 1 or quantity > 5:
