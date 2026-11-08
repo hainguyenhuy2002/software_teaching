@@ -6,7 +6,7 @@ We will then use an equipment-loan register to work with several records, edit o
 
 ## Part 2 — Working with records and files
 
-The calculator holds values for one quote. A register must keep several complete sets of values and let the user choose which one to change. We will keep the same rule that the screen must match the data, while extending it to selection, editing and saved files.
+The calculator holds values for one quote. A register must keep several complete sets of values and let the user choose which one to change. We will keep the same rule that the screen must match the data, while extending it to selection, editing and saved files. Therefore, we extend the control connections into a record-based application. 
 
 ### 2.1 Display records and identify the selected record
 
